@@ -1,8 +1,9 @@
-
 import Product from './components/Product/Produc'
 
 function App(  ) {
 
+
+  
 
   return (
       <Product name="Shoes" 
@@ -13,6 +14,7 @@ function App(  ) {
         price={50.00} />
   
   );
+
 }
 
 export default App;
