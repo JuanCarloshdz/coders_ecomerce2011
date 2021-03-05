@@ -12,7 +12,6 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(3)
     }
 }));
-
 const Products = () => {
 
     const clases = useStyles();
