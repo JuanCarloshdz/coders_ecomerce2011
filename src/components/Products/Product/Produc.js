@@ -17,7 +17,8 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 
 import { AddShoppingCart } from '@material-ui/icons';
-
+import accounting from 'accounting'
+ 
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 345,
@@ -43,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Product(
     {name, subtitle, productType,
-    raiting, description, price}) {
+    raiting, description, price, image, id}) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -56,7 +57,7 @@ export default function Product(
       <CardHeader
         action={
             <Typography variant="h5" color='textSecondary'  >
-                $ {price}
+                {accounting.formatMoney(price)}
             </Typography>
         }
         title={name}
@@ -65,7 +66,7 @@ export default function Product(
       />
       <CardMedia
         className={classes.media}
-        image="https://s2.r29static.com/bin/entry/ebd/0,675,2000,1050/x,80/1929471/image.jpg"
+        image={image}
         title={name}
       />
       <CardContent>
